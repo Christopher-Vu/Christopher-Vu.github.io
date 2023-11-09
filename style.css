@@ -1,0 +1,13 @@
+/*Hepta-Slab & Helvatica are the main fonts*/
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.cover {
+    background-color: #121212;
+    height: 130vh;
+    width: 100vw;
+}
