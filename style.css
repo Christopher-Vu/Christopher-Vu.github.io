@@ -26,6 +26,10 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;    
+    
+    color: #F5F5F5;
+    font-size: clamp(10px, 1vw, 20px);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 #nav-border {
@@ -46,7 +50,7 @@ body {
     left: -50px;
     top: 0;
     height: 100%;
-    background-color: #2c2c2c;
+    background-color: #24252a;
     transform: skewX(45deg);
     z-index: -1;
     width: var(--width);
@@ -60,6 +64,25 @@ body {
     color: #F5F5F5;
     font-size: clamp(10px, 1vw, 20px);
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+.navbar-hover {
+    --s: 0.1em;   
+    --c: white;
+
+    padding-bottom: var(--s);
+    background: 
+    linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+    background-clip: text,padding-box;
+    transition: 0.5s;
+}
+
+.navbar-hover:hover {
+    --_p: 100%;
+    text-shadow: 4px 4px 20px rgba(255, 255, 255, 0.5);
 }
 
 #navbar-date {
