@@ -1,9 +1,33 @@
 /*Hepta-Slab & Helvatica are the main fonts*/
 
 body {
+    background-color: black;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+#cover {
+    transition: 400ms;
+}
+
+#greeting {
+    z-index: 50;
+    position: fixed;
+    background-color: #F5F5F5;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 500ms ease-out, border-bottom-right-radius 350ms ease-out, border-bottom-left-radius 350ms ease-out;
+}
+
+#greeting-text {
+    font-family: Hepta-Slab;
+    color: black;
+    font-size: 100px;
 }
 
 #l-background {
