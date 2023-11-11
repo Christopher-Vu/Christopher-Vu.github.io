@@ -14,8 +14,6 @@ async function greeting() {
     const delays = [350, 250, 150, 120, 120, 120, 120, 120, 120, 120, 120];
     const words = ["Xin chào", "привет", "你好", "नमस्ते", "こんにちは", "Hola", "Guten Tag", "سلام", "Ciao", "Salve", "안녕하세요",];
     
-    cover.style.transform = "translateY(100vh)";
-
     await sleep(600);
     for (let i = 0; i < delays.length; i++) {
         await sleep(delays[i]);
@@ -29,7 +27,6 @@ async function greeting() {
     greeting.style.transform = "translateY(-100vh)";
     greeting.style.borderBottomLeftRadius = "100vw";
     greeting.style.borderBottomRightRadius = "100vw";
-    cover.style.transform = "translateY(0)";
 }
 
 greeting();

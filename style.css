@@ -7,10 +7,6 @@ body {
     overflow-x: hidden;
 }
 
-#cover {
-    transition: 400ms;
-}
-
 #greeting {
     z-index: 50;
     position: fixed;
@@ -114,10 +110,9 @@ body {
     text-align: right;
 }
 
-#car-wrapper {
-    position: absolute;
-    width: clamp(max(30vw, 30vh), 30vw, 50vh);
-    height: 140vh;
-    background-color: #F5F5F5;
-    transform: translate(50vw, -10vh) rotate(7deg);
+#cover-reel {
+    background-color: whitesmoke;
+    width: 40vw;
+    transform: translateX(60vw);
+    height: 100vh;
 }
