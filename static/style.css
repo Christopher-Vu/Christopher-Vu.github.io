@@ -46,17 +46,16 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: auto auto auto;
-    align-items: center;  
+    align-items: center;
     
     color: #F5F5F5;
-    font-size: clamp(5px, 2vw, 50px);
+    font-size: clamp(5px, 1.2vw, 50px);
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 #nav-border {
     position: relative;
     width: 0;
-    margin-top: 7px;
     content: "";
     height: 2px;
     background-color:#F5F5F5;
@@ -82,10 +81,10 @@ body {
 .navbar-item {
     position: relative;
     font-family: Montserrat;
-    font-size:medium;
+    font-size: medium;
     font-weight: bold;
     color: #F5F5F5;
-    font-size: clamp(5px, 2vw, 20px);
+    font-size: clamp(5px, 1.2vw, 20px);
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     text-decoration: none;
     margin: 0;
