@@ -5,6 +5,8 @@ const sleep = (milliseconds) => {
 
 // greeting
 async function greeting() {
+    window.scrollTo(0,0); // bring user to top of page
+    
     const greeting = document.getElementById("greeting");
     const greetingText = document.getElementById("greeting-text");
 
@@ -18,7 +20,7 @@ async function greeting() {
     }
     await sleep(500);
 
-    window.scrollTo({top: 0}); // bring user to top of page
+    window.scrollTo(0,0); // bring user to top of page
 
     // pull greeting from view
     greeting.style.transform = "translateY(-100vh)";

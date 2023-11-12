@@ -23,7 +23,7 @@ body {
 #greeting-text {
     font-family: Forum;
     color: black;
-    font-size: 7rem;
+    font-size: 7vw;
 }
 
 #l-background {
@@ -49,7 +49,7 @@ body {
     align-items: center;    
     
     color: #F5F5F5;
-    font-size: clamp(1.2rem, 1.2rem, 20px);
+    font-size: clamp(1vw, 20px, 5vw);
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
@@ -83,7 +83,7 @@ body {
     font-size:medium;
     font-weight: bold;
     color: #F5F5F5;
-    font-size: clamp(1.2rem, 1,2rem, 20px);
+    font-size: clamp(1vw, 1.2rem, 5vw);
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     text-decoration: none;
 }
@@ -110,18 +110,10 @@ body {
     text-align: right;
 }
 
-#cover-reel {
-    background-color: whitesmoke;
-    width: 40vw;
-    transform: translateX(60vw);
-    height: 100vh;
-}
-
 .image {
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover !important;
     background-attachment: fixed;   
-    background-position: center;
 }
 
 @keyframes rotate-square {
@@ -161,14 +153,14 @@ body {
 
 #name {
     font-family: Forum;
-    font-size: 9rem;
+    font-size: 7.5vw;
     color: #F5F1ED;
     text-shadow: 2px 2px 7px rgba(217, 213, 210, 0.5);
 }
 
 #desc {
     font-family: Montserrat;
-    font-size: 1rem;
+    font-size: clamp(10px, 1rem, 20px);
     color: #d9d5d2;
     text-shadow: 1px 1px 3px rgba(217, 213, 210, 0.5); 
     margin: 3vh 3vh;
