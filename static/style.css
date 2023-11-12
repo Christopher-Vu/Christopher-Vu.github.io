@@ -10,7 +10,7 @@ body {
 #greeting {
     z-index: 50;
     position: fixed;
-    background-color: #F5F5F5;
+    background-color: white;
     height: 100vh;
     width: 100vw;
 
@@ -23,14 +23,13 @@ body {
 #greeting-text {
     font-family: Forum;
     color: black;
-    font-size: 100px;
+    font-size: 7rem;
 }
 
 #l-background {
     background-image: url("l-bg.jpg");
     height: 200vh;
     width: 100vw;
-    transform: translate(0, 0);
 }
 
 #navbar {
@@ -50,7 +49,7 @@ body {
     align-items: center;    
     
     color: #F5F5F5;
-    font-size: clamp(10px, 1vw, 20px);
+    font-size: clamp(1.2rem, 1.2rem, 20px);
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
@@ -84,7 +83,7 @@ body {
     font-size:medium;
     font-weight: bold;
     color: #F5F5F5;
-    font-size: clamp(10px, 1vw, 20px);
+    font-size: clamp(1.2rem, 1,2rem, 20px);
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     text-decoration: none;
 }
@@ -121,6 +120,8 @@ body {
 .image {
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;   
+    background-position: center;
 }
 
 @keyframes rotate-square {

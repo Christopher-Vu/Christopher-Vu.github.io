@@ -5,11 +5,8 @@ const sleep = (milliseconds) => {
 
 // greeting
 async function greeting() {
-    window.scrollTo({top: 0}); // bring user to 100vh
-
     const greeting = document.getElementById("greeting");
     const greetingText = document.getElementById("greeting-text");
-    const cover = document.getElementById("cover");
 
     const delays = [350, 250, 150, 120, 120, 120, 120, 120, 120, 120, 120];
     const words = ["Xin chào", "привет", "你好", "नमस्ते", "こんにちは", "Hola", "Guten Tag", "سلام", "Ciao", "Salve", "안녕하세요",];
