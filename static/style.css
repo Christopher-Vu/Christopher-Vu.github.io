@@ -27,13 +27,14 @@ body {
 }
 
 #l-background {
-    background-color: rgb(44, 46, 44);
+    background-image: url("l-bg.jpg");
     height: 200vh;
     width: 100vw;
+    transform: translate(0, 0);
 }
 
 #navbar {
-    z-index: 2;
+    z-index: 4;
     position:fixed;
     display: flex;
     flex-direction: column;
@@ -117,7 +118,42 @@ body {
     height: 100vh;
 }
 
+.image {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes rotate-square {
+    from {
+        transform: translate(-50vw, -70vw) rotate(0deg);
+    }
+    to {
+        transform: translate(-50vw, -70vw) rotate(360deg);
+    }
+}
+
+.square {
+    position:absolute;
+    z-index: 0;
+    opacity: 0.2;
+}
+    
+#square1 {
+    height: 95vw;
+    width: 95vw;
+    background-image: url("square1.png");
+    animation: rotate-square 90s linear infinite;
+}
+
+#square2 {
+    height: 85vw;
+    width: 85vw;
+    background-image: url("square2.png");
+    animation: rotate-square 90s linear infinite -7s;
+}
+
 #cover-info {
+    z-index: 2;
     transform: translate(10vw, 30vh);
     text-decoration: none;
 }
@@ -152,22 +188,3 @@ body {
     text-decoration: none;
     margin: 3vh;
 }
-
-.image {
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.square {
-    position:absolute;
-    z-index: 2;
-    height: 100vw;
-    width: 100vw;
-    opacity: 0.4;
-}
-
-#square1 {
-    background-image: url("square1.png");
-    transform: translate(-60vw, -70vw);
-}
-
