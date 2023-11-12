@@ -138,7 +138,7 @@ body {
     height: 95vw;
     width: 95vw;
     background-image: url("square1.png");
-    animation: rotate-square 90s linear infinite;
+    animation: rotate-square 120s linear infinite;
 }
 
 #square2 {
@@ -163,7 +163,7 @@ body {
 
 #desc {
     font-family: Montserrat;
-    font-size: clamp(1rem, 1rem, 20px);
+    font-size: clamp(7px, 1vw, 20px);
     color: #d9d5d2;
     text-shadow: 1px 1px 3px rgba(217, 213, 210, 0.5); 
     margin: 3vh 3vh;
@@ -173,14 +173,30 @@ body {
 .cover-link:hover {
     opacity: 1 ;
     text-shadow: 1px 1px 6px rgba(217, 213, 210, 0.8);
-    letter-spacing: 8px;
+    letter-spacing: 0.5vw;
 }
 
 .cover-link {
-    font-size: 2rem;
+    font-size: clamp(12px, 2vw, 30px);
     font-family: Montserrat;
     color: #c9c6c3;
     text-shadow: 1px 1px 3px rgba(217, 213, 210, 0.5); 
     text-decoration: none;
     margin: 3vh;
+}
+
+@media (orientation: portrait) {
+    .vert-only {
+        display: none;
+    }
+
+
+    @keyframes rotate-square {
+        from {
+            transform: translate(-50vw, -50vw) rotate(0deg);
+        }
+        to {
+            transform: translate(-50vw, -50vw) rotate(360deg);
+        }
+    }
 }
