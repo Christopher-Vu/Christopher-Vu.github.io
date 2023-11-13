@@ -148,6 +148,10 @@ body {
     animation: rotate-square 90s linear infinite -7s;
 }
 
+#lbg-bg {
+    
+}
+
 #cover-info {
     z-index: 2;
     transform: translate(10vw, 30vh);
