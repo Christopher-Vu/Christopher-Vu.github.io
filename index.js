@@ -23,7 +23,7 @@ async function greeting() {
     window.scrollTo(0,0); // bring user to top of page
 
     // pull greeting from view
-    greeting.style.transform = "translateY(-100vh)";
+    greeting.style.transform = "translateY(-105vh)";
     greeting.style.borderBottomLeftRadius = "100vw";
     greeting.style.borderBottomRightRadius = "100vw";
 }
