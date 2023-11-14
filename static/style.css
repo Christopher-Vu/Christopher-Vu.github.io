@@ -40,8 +40,8 @@ body {
     position: fixed;
     display: flex;
     flex-direction: column;
-    width: 90%;
-    padding: 0 5%;
+    width: 80%;
+    padding: 0 10%;
     transition: 300ms ease-out;
 }
 
@@ -119,7 +119,7 @@ body {
 .image {
     background-repeat: no-repeat;
     background-size: cover !important;
-    background-attachment: fixed;   
+    background-attachment: absolute;   
 }
 
 @keyframes rotate-square {
@@ -134,10 +134,10 @@ body {
 .square {
     position:absolute;
     z-index: 0;
-    opacity: 0.2;
 }
     
 #square1 {
+    opacity: 0.2;
     height: 95vw;
     width: 95vw;
     background-image: url("square1.png");
@@ -145,17 +145,21 @@ body {
 }
 
 #square2 {
-    height: 85vw;
-    width: 85vw;
+    opacity: 0.2;
+    height: 90vw;
+    width: 90vw;
     background-image: url("square2.png");
     animation: rotate-square 90s linear infinite -7s;
 }
 
 #lbg-bg-wrapper {
-    position: fixed;
+    background-color: black;
+    position: absolute;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    width: 140%;
+    height: 200%;
 }
 
 #lbg-bg-wrapper::before {
@@ -167,14 +171,15 @@ body {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(255,255,255,0) 100%),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 1) 100%);
     pointer-events: none;
 }
 
 #lbg-bg {
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 70%;
 }
 
 #cover-info {
