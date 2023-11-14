@@ -1,4 +1,7 @@
-/*Forum & Helvetica are the main fonts*/
+@font-face {
+    font-family: 'Qelthan'; 
+    src: url('qelthan-font-1699909758-0/Qelthan-BF6481585d31c6f.otf') format('opentype');
+}
 
 body {
     background-color: black;
@@ -20,13 +23,12 @@ body {
 }
 
 #greeting-text {
-    font-family: Forum;
+    font-family: 'Qelthan';
     color: black;
     font-size: 7vw;
 }
 
 #l-background {
-    background-image: url("l-bg.jpg");
     height: 200vh;
     width: 100vw;
 }
@@ -148,19 +150,29 @@ body {
 }
 
 #lbg-bg-wrapper {
-    position: relative;
+    position: fixed;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 #lbg-bg-wrapper::before {
     content: '';
     position: absolute;
+
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     pointer-events: none;
+}
+
+#lbg-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
 #cover-info {
@@ -170,7 +182,7 @@ body {
 }
 
 #name {
-    font-family: Forum;
+    font-family: 'Qelthan';
     font-size: 7.5vw;
     color: #F5F1ED;
     text-shadow: 2px 2px 7px rgba(217, 213, 210, 0.5);
