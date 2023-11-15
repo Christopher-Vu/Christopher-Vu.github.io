@@ -33,13 +33,15 @@ greeting();
 
 
 // grid looking thingy
+const wrapper = document.getElementById("grid-wrapper")
+
 let columns = Math.floor(document.body.clientWidth / 50), 
     rows = Math.floor(document.body.clientHeight/ 50); 
 
 const createTile = index => {
     const tile = document.createElement("div");
+    tile.classList.class("tile")
 
-    tile.classList.ass("tile")
     return tile
 }
 
@@ -49,4 +51,4 @@ const createTiles = quantity => {
     })
 }
 
-createTiles(columns * rows)
+createTiles(columns * rows);
