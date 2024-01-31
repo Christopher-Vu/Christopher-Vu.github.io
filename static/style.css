@@ -121,36 +121,6 @@ body {
     background-attachment: absolute;   
 }
 
-@keyframes rotate-square {
-    from {
-        transform: translate(-50vw, -70vw) rotate(0deg);
-    }
-    to {
-        transform: translate(-50vw, -70vw) rotate(360deg);
-    }
-}
-
-.square {
-    position:absolute;
-    z-index: 0;
-}
-    
-#square1 {
-    opacity: 0.2;
-    height: 95vw;
-    width: 95vw;
-    background-image: url("square1.png");
-    animation: rotate-square 120s linear infinite;
-}
-
-#square2 {
-    opacity: 0.2;
-    height: 90vw;
-    width: 90vw;
-    background-image: url("square2.png");
-    animation: rotate-square 90s linear infinite -7s;
-}
-
 #lbg-bg-wrapper {
     background-color: black;
     position: absolute;
@@ -218,34 +188,8 @@ body {
     margin: 3vh;
 }
 
-.grid-wrapper {
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-}
-
-.tile {
-    height: 50px;
-    width: 50px;
-    color: white;
-    z-index: 100;
-    border: solid black;
-}
-
 @media (orientation: portrait) {
     .vert-only {
         display: none;
-    }
-
-
-    @keyframes rotate-square {
-        from {
-            transform: translate(-50vw, -50vw) rotate(0deg);
-        }
-        to {
-            transform: translate(-50vw, -50vw) rotate(360deg);
-        }
     }
 }
