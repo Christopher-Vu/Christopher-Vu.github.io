@@ -65,25 +65,11 @@ body {
 
 #nav-border {
     position: relative;
-    width: 100%;
+    width: 0;
     content: "";
     height: 2px;
     background-color: var(--main-text-color);
     transition: 300ms ease-out;
-}
-
-
-#navbar::before {
-    transition: 1000ms ease-out;
-    content: "";
-    position: absolute;
-    left: -50px;
-    top: 0;
-    height: 100%;
-    background-color: #24252a;
-    transform: skewX(45deg);
-    z-index: -1;
-    width: var(--width);
 }
 
 
