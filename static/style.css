@@ -208,7 +208,6 @@ body {
 .cover-link:hover {
     opacity: 1 ;
     text-shadow: 1px 1px 6px rgba(217, 213, 210, 0.8);
-    letter-spacing: 0.5vw;
 }
 
 .cover-link {
