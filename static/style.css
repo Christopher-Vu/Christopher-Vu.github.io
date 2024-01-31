@@ -179,12 +179,11 @@ body {
 
 #landing-img {
     position:absolute;
-    height: 50vh;
+    height: 30vh;
     transform: translateY(10vh);
     right: 10%;
     width: 80%;
-    background-image: url("landing-img.png");
-    background-position: center;
+    background-image: url("landing-img3.png");
 }
 
 #landing-img::before {
