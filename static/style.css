@@ -109,7 +109,6 @@ body {
 
 .underline-hover:hover {
     --_p: 100%;
-    text-shadow: 4px 4px 20px rgba(255, 255, 255, 0.5);
 }
 
 #navbar-date {
@@ -207,7 +206,7 @@ body {
 
 .cover-link:hover {
     opacity: 1 ;
-    text-shadow: 1px 1px 6px rgba(217, 213, 210, 0.8);
+    color: white;
 }
 
 .cover-link {
