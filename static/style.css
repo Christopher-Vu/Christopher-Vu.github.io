@@ -7,6 +7,7 @@
     --main-bg-color: #EEEDEB;
     --main-text-color: #3C3633;
     --emphasis-text: black;
+    --radius: 10px;
 }
 
 body {
@@ -60,7 +61,6 @@ body {
     align-items: center;
     
     color: var(--main-text-color);
-    font-size: clamp(5px, 1.2vw, 50px);
 }
 
 #nav-border {
@@ -76,10 +76,9 @@ body {
 .navbar-item {
     position: relative;
     font-family: Montserrat;
-    font-size: medium;
     font-weight: bold;
     color: var(--main-text-color);
-    font-size: clamp(5px, 1.2vw, 20px);
+    font-size: 20px;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     text-decoration: none;
     margin: 0;
@@ -158,7 +157,7 @@ body {
 
 #desc {
     font-family: Montserrat;
-    font-size: clamp(7px, 1vw, 20px);
+    font-size: 20px;
     color: var(--main-text-color);
     margin: 3vh 3vh;
 }
@@ -170,7 +169,7 @@ body {
 }
 
 .cover-link {
-    font-size: clamp(12px, 2vw, 30px);
+    font-size: 30px;
     font-family: Montserrat;
     color: var(--main-text-color);
     text-decoration: none;
@@ -180,7 +179,7 @@ body {
 #landing-img {
     position:absolute;
     height: 30vh;
-    transform: translateY(10vh);
+    transform: translateY(6vh);
     right: 10%;
     width: 80%;
     background-image: url("landing-img3.png");
@@ -197,8 +196,67 @@ body {
     pointer-events: none; 
 }
 
+#scroll-circle {
+	position: relative;
+	width: calc(var(--scroll-radius) / 3);
+	height: calc(var(--scroll-radius) / 3);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#scroll-ind {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	animation: rotateText 10s linear infinite;
+}
+
+#scroll-text {
+    font-size;: calc(var(--radius) / 10)
+}
+
+#inner-scroll-circle {
+	position: absolute;
+	width: calc(var(--d-outer) - var(--frame-size));
+	height: calc(var(--d-outer) - var(--frame-size));
+    background-color: var(--main-text-color);
+	background-size: cover;
+	border-radius: 50%;
+	filter: contrast(1.5);
+}
+
+@keyframes rotateText {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+#scroll-ind p span {
+	position: absolute;
+	left: 50%;
+	font-size: 1.2em;
+	transform-origin: 0 var(--radius);
+}
+
 @media (orientation: portrait) {
     .vert-only {
         display: none;
+    }
+
+    #name {
+        font-size: 10vw;
+    }   
+
+    .navbar-item, #desc {
+        font-size: 14px;
+    }
+
+    .cover-link {
+        font-size: 18px;
     }
 }
