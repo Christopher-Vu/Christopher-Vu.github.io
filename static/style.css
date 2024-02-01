@@ -7,7 +7,11 @@
     --main-bg-color: #EEEDEB;
     --main-text-color: #3C3633;
     --emphasis-text: black;
-    --radius: 10px;
+    --radius: 7vw;
+	--frame-size: calc(var(--radius) / 3);
+	--d-outer: calc(var(--radius) * 2);
+    --d-inner: calc(var(--d-outer) * 0.5);
+	--font-size: calc(var(--radius) / 6);
 }
 
 body {
@@ -196,14 +200,27 @@ body {
     pointer-events: none; 
 }
 
+#scroll-text {
+	font-size: var(--font-size);
+}
+
 #scroll-circle {
-	position: relative;
-	width: calc(var(--scroll-radius) / 3);
-	height: calc(var(--scroll-radius) / 3);
+	position: absolute;
+	width: var(--d-outer);
+	height: var(--d-outer);
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+    transform: translate(75vw, 25vh);
+}
+
+#logo {
+	position: absolute;
+	width: var(--d-inner);
+	height: var(--d-inner);
+	background-color: var(--main-text-color);
+	border-radius: 50%;
 }
 
 #scroll-ind {
@@ -211,20 +228,6 @@ body {
 	width: 100%;
 	height: 100%;
 	animation: rotateText 10s linear infinite;
-}
-
-#scroll-text {
-    font-size;: calc(var(--radius) / 10)
-}
-
-#inner-scroll-circle {
-	position: absolute;
-	width: calc(var(--d-outer) - var(--frame-size));
-	height: calc(var(--d-outer) - var(--frame-size));
-    background-color: var(--main-text-color);
-	background-size: cover;
-	border-radius: 50%;
-	filter: contrast(1.5);
 }
 
 @keyframes rotateText {
@@ -236,10 +239,9 @@ body {
 	}
 }
 
-#scroll-ind p span {
+#scroll-text span {
 	position: absolute;
 	left: 50%;
-	font-size: 1.2em;
 	transform-origin: 0 var(--radius);
 }
 

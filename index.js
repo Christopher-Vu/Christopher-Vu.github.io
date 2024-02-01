@@ -13,3 +13,14 @@ document.addEventListener('scroll', function() {
         navBorder.style.width = '0';
     }
   });
+
+// Rotate the scroll text 
+
+const text = document.getElementById("scroll-text");
+
+text.innerHTML = text.innerText
+	.split("")
+	.map(
+		(char, i) => `<span style="transform:rotate(${i * 13.1}deg)">${char}</span>`
+	)
+	.join("");
