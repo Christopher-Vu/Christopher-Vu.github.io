@@ -11,7 +11,12 @@
 	--frame-size: calc(var(--radius) / 3);
 	--d-outer: calc(var(--radius) * 2);
     --d-inner: calc(var(--d-outer) * 0.5);
-	--font-size: calc(var(--radius) / 6);
+}
+
+@media (orientation: portrait) {
+    :root {
+        --radius: 10vh;
+    }
 }
 
 body {
@@ -201,7 +206,7 @@ body {
 }
 
 #scroll-text {
-	font-size: var(--font-size);
+	font-size: calc(var(--radius) / 6);
 }
 
 #scroll-circle {
@@ -260,5 +265,9 @@ body {
 
     .cover-link {
         font-size: 18px;
+    }
+
+    #scroll-circle {
+        transform: translate(70vw, 40vh);
     }
 }
