@@ -14,8 +14,10 @@ document.addEventListener('scroll', function() {
     }
   });
 
-var bgColors = ['#EEEDEB', '#FFFDE8', '#000000', '#17223B', '#CFD3CE'];
-var textColors = ['#3C3633', '#DA2D2D', '#F0EDCF', '#FF6768', '#34626C']
+var bgColors = ['#E0CCBE', '#000000', '#EEEDEB', '#17223B', '#CFD3CE'];
+var textColors = ['#3C3633', '#F0EDCF','#DA2D2D', '#FC6736', '#34626C'];
+var emphasisColors = ['#2D2926', '#F4F3E0', '#9F0C0C', '#E94324', '#1D3C46'];
+var bgUrls = ["landing-img1.png", "landing-img2.png", "landing-img3.png", "landing-img3.png", "landing-img3.png"];
 let colInd = 0;
 
 function swapColors() {
@@ -26,8 +28,7 @@ function swapColors() {
 
     document.documentElement.style.setProperty('--main-bg-color', bgColors[colInd]);
     document.documentElement.style.setProperty('--main-text-color', textColors[colInd]);
-
-    const rootStyles = getComputedStyle(document.documentElement);
-    console.log(rootStyles.getPropertyValue('--main-bg-color'));
-    console.log(rootStyles.getPropertyValue('--main-text-color'));
+    document.documentElement.style.setProperty('--emphasis-text', emphasisColors[colInd]);
+/*     let landingImg = document.getElementById("landing-img");
+    landingImg.style.setProperty('background-image', 'url("' + bgUrls[colInd] + '")'); */
 }
