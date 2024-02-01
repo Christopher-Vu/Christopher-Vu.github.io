@@ -19,12 +19,15 @@ var textColors = ['#3C3633', '#DA2D2D', '#F0EDCF', '#FF6768', '#34626C']
 let colInd = 0;
 
 function swapColors() {
-    const stylesheet = document.getElementById('stylesheet').sheet;
     colInd = colInd + 1;
     if (colInd == 5) {
         colInd = 0;
     }
 
-    stylesheet.cssRules[1].style.setProperty('--main-bg-color', bgColors[colInd]);
-    stylesheet.cssRules[1].style.setProperty('--main-text-color', textColors[colInd]);
+    document.documentElement.style.setProperty('--main-bg-color', bgColors[colInd]);
+    document.documentElement.style.setProperty('--main-text-color', textColors[colInd]);
+
+    const rootStyles = getComputedStyle(document.documentElement);
+    console.log(rootStyles.getPropertyValue('--main-bg-color'));
+    console.log(rootStyles.getPropertyValue('--main-text-color'));
 }
