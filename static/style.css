@@ -3,6 +3,10 @@
     src: url('myglaos-axmyj.ttf');
 }
 
+* {
+    transition: 0.3s;
+}
+
 :root {
     --main-bg-color: #EEEDEB;
     --main-text-color: #3C3633;

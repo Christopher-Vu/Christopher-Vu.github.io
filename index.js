@@ -14,13 +14,17 @@ document.addEventListener('scroll', function() {
     }
   });
 
-// Rotate the scroll text 
+var bgColors = ['#EEEDEB', '#FFFDE8', '#000000', '#17223B', '#CFD3CE'];
+var textColors = ['#3C3633', '#DA2D2D', '#F0EDCF', '#FF6768', '#34626C']
+let colInd = 0;
 
-const text = document.getElementById("scroll-text");
+function swapColors() {
+    const stylesheet = document.getElementById('stylesheet').sheet;
+    colInd = colInd + 1;
+    if (colInd == 5) {
+        colInd = 0;
+    }
 
-text.innerHTML = text.innerText
-	.split("")
-	.map(
-		(char, i) => `<span style="transform:rotate(${i * 13.1}deg)">${char}</span>`
-	)
-	.join("");
+    stylesheet.cssRules[1].style.setProperty('--main-bg-color', bgColors[colInd]);
+    stylesheet.cssRules[1].style.setProperty('--main-text-color', textColors[colInd]);
+}

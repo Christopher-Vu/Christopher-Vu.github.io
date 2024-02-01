@@ -29,3 +29,12 @@ async function greeting() {
 }
 
 greeting();
+
+const text = document.getElementById("scroll-text");
+
+text.innerHTML = text.innerText
+	.split("")
+	.map(
+		(char, i) => `<span style="transform:rotate(${i * 13.1}deg)">${char}</span>`
+	)
+	.join("");
