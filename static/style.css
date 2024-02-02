@@ -51,7 +51,8 @@ body {
 }
 
 #l-background {
-    height: 200vh;
+    position:fixed;
+    height: 100vh;
     width: 100vw;
     background-color: var(--main-bg-color);
 }

@@ -17,8 +17,8 @@ document.addEventListener('scroll', function() {
 var bgColors = ['#E0CCBE', '#000000', '#EEEDEB', '#17223B', '#CFD3CE'];
 var textColors = ['#3C3633', '#F0EDCF','#DA2D2D', '#FC6736', '#34626C'];
 var emphasisColors = ['#2D2926', '#F4F3E0', '#9F0C0C', '#E94324', '#1D3C46'];
-var bgUrls = ["landing-img1.png", "landing-img2.png", "landing-img1.png", "landing-img2.png", "landing-img1.png"];
-var bgPos = ["center", "top", "center", "top", "center"];
+var bgUrls = ["landing-img1.png", "landing-img2.png", "landing-img3.png", "landing-img4.png", "landing-img5.png"];
+var bgPos = ["top", "top", "center", "top", "center"];
 let colInd = 0;
 
 function swapColors() {
