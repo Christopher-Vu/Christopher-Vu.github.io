@@ -195,7 +195,9 @@ body {
     transform: translateY(6vh);
     right: 10%;
     width: 80%;
-    background-image: url("landing-img3.png");
+    background-image: url("landing-img1.png");
+    background-position: center;
+    filter: blur(3px);
 }
 
 #landing-img::before {
