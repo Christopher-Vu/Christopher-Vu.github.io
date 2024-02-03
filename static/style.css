@@ -269,6 +269,22 @@ body {
     border-top: 2px solid var(--main-text-color);
 }
 
+#word-grid {
+    display: grid;
+    padding-left: 10%;
+    padding-right: 10%;
+    grid-template-rows: 10vh 15vh 12vh 17vh 12vh;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.grid-word {
+    text-align: center;
+    color: var(--main-text-color);
+    font-size: 200%;
+    font-family: 'myglaos';
+    font-weight: bolder;
+}
+
 @media (orientation: portrait) {
     .vert-only {
         display: none;
