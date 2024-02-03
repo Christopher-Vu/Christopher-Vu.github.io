@@ -18,7 +18,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 @media (orientation: portrait) {
@@ -261,10 +261,8 @@ body {
 	transform-origin: 0 var(--radius);
 }
 
-#test {
-    left: 30%;
-    height: 50vh;
-    width: 70vw;
+#desc-block {
+    width: 100vw;
     position: relative;
     top: 100vh;
     background-color: var(--main-bg-color);
