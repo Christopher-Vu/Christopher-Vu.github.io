@@ -17,6 +17,10 @@
     --d-inner: calc(var(--d-outer) * 0.5);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @media (orientation: portrait) {
     :root {
         --radius: 10vh;
@@ -198,7 +202,6 @@ body {
     width: 80%;
     background-image: url("landing-img1.png");
     background-position: center;
-    filter: blur(3px);
 }
 
 #landing-img::before {
