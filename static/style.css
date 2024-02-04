@@ -55,7 +55,6 @@ body {
 }
 
 #l-background {
-    position:fixed;
     height: 100vh;
     width: 100vw;
     background-color: var(--main-bg-color);
@@ -261,28 +260,14 @@ body {
 	transform-origin: 0 var(--radius);
 }
 
-#desc-block {
+#desc-carousel-wrapper {
+    background-color: black;
+    height: 20vh;
     width: 100vw;
     position: relative;
-    top: 100vh;
     background-color: var(--main-bg-color);
     border-top: 2px solid var(--main-text-color);
-}
-
-#word-grid {
-    display: grid;
-    padding-left: 10%;
-    padding-right: 10%;
-    grid-template-rows: 10vh 15vh 12vh 17vh 12vh;
-    grid-template-columns: auto auto auto auto auto;
-}
-
-.grid-word {
-    text-align: center;
-    color: var(--main-text-color);
-    font-size: 200%;
-    font-family: 'myglaos';
-    font-weight: bolder;
+    border-bottom: 2px solid var(--main-text-color);
 }
 
 @media (orientation: portrait) {
