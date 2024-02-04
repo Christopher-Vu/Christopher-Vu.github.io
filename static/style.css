@@ -327,5 +327,13 @@ body {
     #scroll-circle {
         transform: translate(70vw, 35vh);
     }
+
+    .desc-carousel-wrapper {
+        height: 10vh;
+    }
+
+    .desc-carousel p {
+        font-size: 14px;
+    }
 }
 
