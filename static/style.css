@@ -260,14 +260,45 @@ body {
 	transform-origin: 0 var(--radius);
 }
 
-#desc-carousel-wrapper {
-    background-color: black;
+    display: flex;
+    flex-direction: row;
+    width: 200vw;
     height: 20vh;
-    width: 100vw;
-    position: relative;
+    justify-content: space-evenly;
+    
     background-color: var(--main-bg-color);
     border-top: 2px solid var(--main-text-color);
     border-bottom: 2px solid var(--main-text-color);
+}
+
+.desc-carousel {
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.desc-carousel p {
+    font-size: 45px;
+    font-family: 'myglaos';
+    color: var(--main-text-color);
+}
+
+#dc1 {
+    animation: 10s carousel linear infinite;
+}
+
+#dc2 {
+    animation: 12s carousel linear infinite;
+}
+
+@keyframes carousel {
+    0% {
+        transform: translateX(0vw);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
 }
 
 @media (orientation: portrait) {
