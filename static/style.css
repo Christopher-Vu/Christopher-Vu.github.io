@@ -329,11 +329,11 @@ body {
     }
 
     .desc-carousel-wrapper {
-        height: 10vh;
+        height: 7vh;
     }
 
     .desc-carousel p {
-        font-size: 14px;
+        font-size: 10px;
     }
 }
 
