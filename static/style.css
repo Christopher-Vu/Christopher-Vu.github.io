@@ -5,6 +5,7 @@
 
 * {
     transition: 0.3s;
+    margin: 0;
 }
 
 :root {
@@ -72,6 +73,7 @@ body {
 }
 
 #nav-items {
+    margin: 1%;
     position: relative;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -270,6 +272,7 @@ body {
     background-color: var(--main-bg-color);
     border-top: 2px solid var(--main-text-color);
     border-bottom: 2px solid var(--main-text-color);
+    margin: 0;
 }
 
 .desc-carousel {
@@ -292,6 +295,16 @@ body {
 
 #dc2 {
     animation: 12s carousel linear infinite;
+}
+
+#landing-p {
+    font-weight: bold;
+    padding: 10%;
+    font-family: 'myglaos';
+    font-size: 5vw;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
 }
 
 @keyframes carousel {
