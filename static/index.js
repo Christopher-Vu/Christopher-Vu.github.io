@@ -14,7 +14,7 @@ document.addEventListener('scroll', function() {
     }
   });
 
-var bgColors = ['#E0CCBE', '#000000', '#EEEDEB', '#17223B', '#CFD3CE'];
+var bgColors = ['#E0CCBE', '#010101', '#EEEDEB', '#17223B', '#CFD3CE'];
 var textColors = ['#3C3633', '#F0EDCF','#DA2D2D', '#FC6736', '#34626C'];
 var emphasisColors = ['#2F2A28', '#FFFFFF', '#2A0E0E', '#FF8969', '#486A73'];
 var secondaryBgColors = ['#C8BAA9', '#1A1A1A', '#D5D4D3', '#1B2435', '#A6A9A8'];

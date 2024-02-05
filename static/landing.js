@@ -39,8 +39,47 @@ text.innerHTML = text.innerText
 	)
 	.join("");
 
-
 var highlightWrapper = document.getElementById('highlight-wrapper')
+
+function gridLighting() {
+  const mainBgColor = getComputedStyle(document.documentElement).getPropertyValue('--main-bg-color');
+  const RGBVals = hexToRgb(mainBgColor)
+
+  const rows = Array.from(highlightWrapper.children);
+  for (let i = 0; i < rows.length; i++) {
+    var boxes = Array.from(rows[i].children);
+    for (let j = 0; j < boxes.length; j++) {
+      var box = boxes[j];
+
+      const brightness = Math.floor(Math.random() * 50) + 1;
+      var Bg = [...RGBVals];;
+      
+      for (let i=0; i<3; i++) {
+        Bg[i] = Bg[i] + brightness;
+        if (Bg[i] >= 256) {
+          Bg[i] = 256;
+        }
+      }
+
+      box.style.backgroundColor = `rgb(${Bg[0]}, ${Bg[1]}, ${Bg[2]})`;
+
+      console.log(`rgb(${Bg[0]}, ${Bg[1]}, ${Bg[2]})`);
+    }
+  }
+}
+
+function hexToRgb(hex, result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)) {
+  return result ? result.map(i => parseInt(i, 16)).slice(1) : null
+}
+
+async function runGridLighting() {
+  while (true) { 
+    gridLighting();
+    await sleep(1000);
+  }
+}
+
+runGridLighting();
 
 document.body.addEventListener('click', function (event) {
   if (event.target.closest('#highlight-wrapper')) {

@@ -332,7 +332,7 @@ body {
 }
 
 .highlight-row {
-    transition: 0.5s ease-in-out;
+    transition: 0.5s;
     display: flex;
     flex-direction: row;
     height: 24vw;
@@ -340,7 +340,7 @@ body {
 }
 
 .highlight-row div {   
-    transition: 0.5s ease-in-out;
+    transition: 0.5s;
     border: 3px solid var(--main-text-color);
     width: 26vw;
     height: 100%;
