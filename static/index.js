@@ -33,7 +33,7 @@ function swapColors() {
     document.documentElement.style.setProperty('--emphasis-text', emphasisColors[colInd]);
     document.documentElement.style.setProperty('--secondary-bg-color', secondaryBgColors[colInd]);
     let landingImg = document.getElementById("landing-img");
-    landingImg.style.setProperty('background-image', 'url("static/' + bgUrls[colInd] + '")'); 
+    landingImg.style.setProperty('background-image', 'url("/static/' + bgUrls[colInd] + '")'); 
     landingImg.style.setProperty('background-position', bgPos[colInd]);
 }
 

@@ -38,3 +38,17 @@ text.innerHTML = text.innerText
 		(char, i) => `<span style="transform:rotate(${i * 13.1}deg)">${char}</span>`
 	)
 	.join("");
+
+
+document.body.addEventListener('click', function (event) {
+  if (event.target.closest('#highlight-wrapper')) {
+    if (event.target.classList.contains('highlight')) {
+          event.target.style.height = '48vw';
+          event.target.style.width = '52vw';
+    }
+    
+    return;
+  }
+    
+  swapColors();
+});

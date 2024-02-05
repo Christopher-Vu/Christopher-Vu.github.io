@@ -8,13 +8,13 @@
         <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <link rel="stylesheet" href="static/style.css">
+        <link rel="stylesheet" href="/static/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab&display=swap" rel="stylesheet">
         <link id="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link rel="icon" href="images/logo.png">
     </head>
 
-    <body>
+    <body>  
         <div id="greeting">
             <p id="greeting-text">Hello</p>
         </div>
@@ -86,20 +86,19 @@
             Nice to meet you! Here's what I've <br>been up to over the past couple of years...
         </p>
 
-        <div id="highlight-grid">
-
+        <div id="highlight-wrapper">
+            <div class="highlight-row">
+                <div></div><div class="highlight"></div><div></div><div></div><div></div>
+            </div>
+            <div class="highlight-row">
+                <div></div><div></div><div></div><div class="highlight"></div><div></div>
+            </div>
+            <div class="highlight-row">
+                <div></div><div></div><div class="highlight"></div><div></div><div></div>
+            </div>
         </div>
     </body>
 
-    <script>
-         document.body.addEventListener('click', function (event) {
-            if (event.target.closest('#highlight-grid')) {
-                return; 
-            }
-            
-            swapColors();
-        });
-    </script>
-    <script src="index.js"></script>
-    <script src="landing.js"></script>
+    <script src="/static/index.js"></script>
+    <script src="/static/landing.js"></script>
 </html>
