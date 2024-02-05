@@ -14,7 +14,7 @@
         <link rel="icon" href="images/logo.png">
     </head>
 
-    <body onclick="swapColors()">
+    <body>
         <div id="greeting">
             <p id="greeting-text">Hello</p>
         </div>
@@ -85,8 +85,21 @@
         <p id="landing-p">
             Nice to meet you! Here's what I've <br>been up to over the past couple of years...
         </p>
+
+        <div id="highlight-grid">
+
+        </div>
     </body>
 
+    <script>
+         document.body.addEventListener('click', function (event) {
+            if (event.target.closest('#highlight-grid')) {
+                return; 
+            }
+            
+            swapColors();
+        });
+    </script>
     <script src="index.js"></script>
     <script src="landing.js"></script>
 </html>

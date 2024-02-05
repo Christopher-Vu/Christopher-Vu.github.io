@@ -9,9 +9,11 @@
 }
 
 :root {
-    --main-bg-color: #EEEDEB;
-    --main-text-color: #3C3633;
-    --emphasis-text: #2D2926;
+    --main-bg-color: none;
+    --main-text-color: none;
+    --emphasis-text: none;
+    --secondary-bg-color: none;
+
     --radius: 7vw;
 	--frame-size: calc(var(--radius) / 3);
 	--d-outer: calc(var(--radius) * 2);
@@ -284,7 +286,7 @@ body {
 }
 
 .desc-carousel p {
-    font-size: 45px;
+    font-size: 2.8vw;
     font-family: 'myglaos';
     color: var(--main-text-color);
 }
@@ -316,14 +318,16 @@ body {
     }
 }
 
+#highlight-grid {
+    height: 50vh;
+    width: 100vh;
+    background-color: var(--main-bg-color);
+}
+
 @media (orientation: portrait) {
     .vert-only {
         display: none;
     }
-
-    #name {
-        font-size: 8vw;
-    }   
 
     .navbar-item {
         font-size: 8px;
@@ -343,10 +347,6 @@ body {
 
     .desc-carousel-wrapper {
         height: 7vh;
-    }
-
-    .desc-carousel p {
-        font-size: 10px;
     }
 }
 
