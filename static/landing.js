@@ -45,7 +45,9 @@ var highlightWrapper = document.getElementById('highlight-wrapper')
 document.body.addEventListener('click', function (event) {
   if (event.target.closest('#highlight-wrapper')) {
     if (event.target.classList.contains('highlight') && !event.target.classList.contains('expanded')) {
-      manageHighlights(event, True)
+      manageHighlights(event, True);
+    } else {
+      manageHighlights(event, False);
     }
     
     return;
@@ -57,8 +59,10 @@ document.body.addEventListener('click', function (event) {
 function manageHighlights(event, expand) {
   if (expand) {
     sign = '+'; mult = 2; mult2 = 1;
+    event.classList.add('expanded');
   } else {
     sign = '-'; mult = 1; mult2 = -1;
+    event.classList.remove('expanded');
   }
 
   const parent = event.target.parentElement;
