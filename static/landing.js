@@ -44,10 +44,10 @@ var highlightWrapper = document.getElementById('highlight-wrapper')
 
 document.body.addEventListener('click', function (event) {
   if (event.target.closest('#highlight-wrapper')) {
-    if (event.target.classList.contains('highlight') && !event.target.classList.contains('expanded')) {
-      manageHighlights(event, True);
-    } else {
-      manageHighlights(event, False);
+    if (event.target.classList.contains('highlight') && !(event.target.classList.contains('expanded'))) {
+      manageHighlights(event, true);
+    } else if (event.target.classList.contains('highlight') && event.target.classList.contains('expanded')) {
+      manageHighlights(event, false);
     }
     
     return;
@@ -58,29 +58,29 @@ document.body.addEventListener('click', function (event) {
 
 function manageHighlights(event, expand) {
   if (expand) {
-    sign = '+'; mult = 2; mult2 = 1;
-    event.classList.add('expanded');
+    var sign = '+'; var mult = 2; var mult2 = 1;
+    event.target.classList.add('expanded');
   } else {
-    sign = '-'; mult = 1; mult2 = -1;
-    event.classList.remove('expanded');
+    var sign = '-'; var mult = 1; var mult2 = 0;
+    event.target.classList.remove('expanded');
   }
 
   const parent = event.target.parentElement;
   const highlightSiblings = Array.from(parent.children);
 
-  highlightWrapper.style.height = `calc(${highlightWrapper.offsetHeight}px ${sign}} 24vw)`;
-  parent.style.width = `calc(130vw * ${mult})`;
-  parent.style.height = `calc(24vw * ${mult})`;
+  highlightWrapper.style.height = `calc(${highlightWrapper.offsetHeight}px ${sign} 24vw)`;
+  parent.style.width = `${130 * mult}vw`;
+  parent.style.height = `${24 * mult}vw`;
 
   for (let i=0; i < highlightSiblings.length; i++) {
     const sibling = highlightSiblings[i];
-    sibling.style.height = `calc(24vw * ${mult})`;
-    sibling.style.width = `calc(26vw * ${mult})`;
+    sibling.style.height = `${24 * mult}vw`;
+    sibling.style.width = `${26 * mult}vw`;
   }
 
   if (event.target.classList.contains('c')) {
-    parent.style.transform = `translateX(calc(-52vw * ${mult2}))`;
+    parent.style.transform = `translateX(-${52 * mult2}vw)`;
   } if (event.target.classList.contains('r')) {
-    parent.style.transform = `translateX(calc(-104vw * ${mult2}))`;
+    parent.style.transform = `translateX(-${104 * mult2}vw)`;
   }
 }

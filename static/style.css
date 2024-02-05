@@ -321,7 +321,6 @@ body {
 }
 
 #highlight-wrapper {
-    transition: 0.7s ease-out;
     transform: translateX(-15vw);
     background-color: var(--main-bg-color);
 
@@ -333,6 +332,7 @@ body {
 }
 
 .highlight-row {
+    transition: 0.5s ease-in-out;
     display: flex;
     flex-direction: row;
     height: 24vw;
@@ -340,11 +340,11 @@ body {
 }
 
 .highlight-row div {   
+    transition: 0.5s ease-in-out;
     border: 3px solid var(--main-text-color);
     width: 26vw;
     height: 100%;
 }
-
 
 @media (orientation: portrait) {
     .vert-only {
