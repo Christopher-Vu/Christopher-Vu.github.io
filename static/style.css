@@ -19,7 +19,7 @@
 	--d-outer: calc(var(--radius) * 2);
     --d-inner: calc(var(--d-outer) * 0.5);
 
-    --highlight-rows: 3;
+    --highlight-rows: 5;
 }
 
 html {
@@ -205,7 +205,7 @@ body {
     transform: translateY(6vh);
     right: 10%;
     width: 80%;
-    background-image: url("landing-img1.png");
+    background-image: url("/static/images/landing-img1.png");
     background-position: center;
 }
 
@@ -344,6 +344,14 @@ body {
     border: 3px solid var(--main-text-color);
     width: 26vw;
     height: 100%;
+}
+
+.title-row {
+    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
+    height: 12vw;
+    width: 130vw;
 }
 
 @media (orientation: portrait) {

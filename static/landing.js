@@ -51,19 +51,19 @@ function gridLighting() {
     for (let j = 0; j < boxes.length; j++) {
       var box = boxes[j];
 
-      const brightness = Math.floor(Math.random() * 50) + 1;
-      var Bg = [...RGBVals];;
-      
-      for (let i=0; i<3; i++) {
-        Bg[i] = Bg[i] + brightness;
-        if (Bg[i] >= 256) {
-          Bg[i] = 256;
+      if (!box.classList.contains('highlight')) {
+        const brightness = Math.floor(Math.random() * 50) + 1;
+        var Bg = [...RGBVals];;
+        
+        for (let i=0; i<3; i++) {
+          Bg[i] = Bg[i] + brightness;
+          if (Bg[i] >= 256) {
+            Bg[i] = 256;
+          }
         }
+
+        box.style.backgroundColor = `rgb(${Bg[0]}, ${Bg[1]}, ${Bg[2]})`;
       }
-
-      box.style.backgroundColor = `rgb(${Bg[0]}, ${Bg[1]}, ${Bg[2]})`;
-
-      console.log(`rgb(${Bg[0]}, ${Bg[1]}, ${Bg[2]})`);
     }
   }
 }
