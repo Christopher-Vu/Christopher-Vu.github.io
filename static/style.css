@@ -364,6 +364,21 @@ body {
     font-family: 'myglaos';
 }
 
+.highlight-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.highlight-info div {
+    width: 50%;
+    height: 100%;
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}
+
 @media (orientation: portrait) {
     .vert-only {
         display: none;
