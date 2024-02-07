@@ -40,6 +40,7 @@ body {
 }
 
 #body-wrapper {
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -386,6 +387,10 @@ body {
 
     .desc-carousel-wrapper {
         height: 7vh;
+    }
+
+    .title-row {
+        font-size: 7.5vw;
     }
 }
 
