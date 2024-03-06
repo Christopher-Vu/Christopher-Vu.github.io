@@ -437,3 +437,123 @@ body {
     }
 }
 
+/*Open source styling below*/
+
+.highlight-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: var(--main-bg-color);
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .3s ease;
+}
+
+.highlight-button::before,
+.highlight-button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid var(--main-text-color);
+  transition: all .3s ease;
+}
+
+.highlight-button::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.highlight-button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.highlight-button:active,
+.highlight-button:focus {
+  outline: none;
+}
+
+.highlight-button:active::before,
+.highlight-button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.highlight-button:active::before {
+  top: 3px;
+}
+
+.highlight-button:active::after {
+  bottom: 3px;
+}
+
+.highlight-button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.highlight-button_lg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: var(--main-text-color);
+}
+
+.highlight-button_lg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: var(--main-bg-color);
+  transition: all .4s ease;
+}
+
+.highlight-button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: var(--main-text-color);
+  transform: skew(-15deg);
+  transition: all .4s ease;
+}
+
+.highlight-button_text {
+  position: relative;
+}
+
+.highlight-button:hover .highlight-button_text {
+  color: var(--main-bg-color);
+}
+
+.highlight-button:hover {
+  color: var(--main-bg-color);
+}
+
+.highlight-button:hover .highlight-button_sl {
+  width: calc(100% + 15px);
+}
