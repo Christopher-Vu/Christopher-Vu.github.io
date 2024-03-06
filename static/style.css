@@ -407,6 +407,12 @@ body {
     font-size: 20px;
 }
 
+.highlight-desc div {
+    height: 10%;
+    border-left: 3px solid var(--main-text-color);
+    padding-left: 10%;
+}
+
 @media (orientation: portrait) {
     .vert-only {
         display: none;
