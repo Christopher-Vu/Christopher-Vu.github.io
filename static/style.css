@@ -378,21 +378,33 @@ body {
 .highlight-desc {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }   
 
-.highlight-desc div {
-    width: 100%;
-    border: 3px solid var(--main-text-color);
-}
-
 .highlight-desc p {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10%; 
+
     font-size: 20px;
     color: var(--main-text-color);
-    padding-bottom: 10%;
+    border-left: 3px solid var(--main-text-color);
 }
 
-.highlight-desc hr {
-    color: var(--main-text-color);
+.filler {
+    flex-grow: 1;
+    border-left: 3px solid var(--main-text-color);
+}
+
+.hd2 {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'myglaos';
+}
+
+.hd1 {
+    font-weight: bold;
+    font-size: 20px;
 }
 
 @media (orientation: portrait) {
