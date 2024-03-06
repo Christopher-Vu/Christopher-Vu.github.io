@@ -22,10 +22,6 @@
     --highlight-rows: 7;
 }
 
-html {
-    scroll-behavior:smooth;
-}
-
 @media (orientation: portrait) {
     :root {
         --radius: 10vh;
@@ -37,10 +33,6 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-}
-
-#body-wrapper {
-    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -377,6 +369,30 @@ body {
     display: flex;
     flex-direction: column;
     padding: 10%;
+}
+
+.highlight-row div {
+    padding: 0;
+}
+
+.highlight-desc {
+    display: flex;
+    flex-direction: column;
+}   
+
+.highlight-desc div {
+    width: 100%;
+    border: 3px solid var(--main-text-color);
+}
+
+.highlight-desc p {
+    font-size: 20px;
+    color: var(--main-text-color);
+    padding-bottom: 10%;
+}
+
+.highlight-desc hr {
+    color: var(--main-text-color);
 }
 
 @media (orientation: portrait) {
