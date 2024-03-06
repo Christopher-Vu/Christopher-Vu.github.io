@@ -413,6 +413,10 @@ body {
     padding-left: 10%;
 }
 
+.highlight-info div {
+    display: none;
+}
+
 @media (orientation: portrait) {
     .vert-only {
         display: none;
@@ -440,6 +444,18 @@ body {
 
     .title-row {
         font-size: 7.5vw;
+    }
+
+    .highlight-desc p {
+        font-size: 14px;
+    }
+
+    .hd2 {
+        font-size: 14px;
+    }
+
+    .hd1 {
+        font-size: 12px;
     }
 }
 
