@@ -417,48 +417,6 @@ body {
     opacity: 0;
 }
 
-@media (orientation: portrait) {
-    .vert-only {
-        display: none;
-    }
-
-    .navbar-item {
-        font-size: 8px;
-    }
-
-    #desc {
-        font-size: 14px;
-    }
-
-    .cover-link {
-        font-size: 18px;
-    }
-
-    #scroll-circle {
-        transform: translate(70vw, 35vh);
-    }
-
-    .desc-carousel-wrapper {
-        height: 7vh;
-    }
-
-    .title-row {
-        font-size: 7.5vw;
-    }
-
-    .highlight-desc p {
-        font-size: 6px;
-    }
-
-    .hd2 {
-        font-size: 7px;
-    }
-
-    .hd1 {
-        font-size: 6px;
-    }
-}
-
 /*Open source styling below*/
 
 .highlight-button {
@@ -578,4 +536,60 @@ body {
 
 .highlight-button:hover .highlight-button_sl {
   width: calc(100% + 15px);
+}
+
+@media (orientation: portrait) {
+    .vert-only {
+        display: none;
+    }
+
+    .navbar-item {
+        font-size: 8px;
+    }
+
+    #desc {
+        font-size: 14px;
+    }
+
+    .cover-link {
+        font-size: 18px;
+    }
+
+    #scroll-circle {
+        transform: translate(70vw, 35vh);
+    }
+
+    .desc-carousel-wrapper {
+        height: 7vh;
+    }
+
+    .title-row {
+        font-size: 7.5vw;
+    }
+
+    .highlight-desc p {
+        font-size: 5px;
+    }
+
+    .hd2 {
+        font-size: 5.5px;
+    }
+
+    .hd1 {
+        font-size: 5.5px;
+    }
+
+    .highlight-button {
+        font-size: 7px;
+        padding: 8px;
+    }
+
+    .highlight-button_lg {
+        padding: 5px 3px;
+    }
+
+    .highlight-desc div {
+        padding-top: 5%;
+        height: 4.5vh;
+    }
 }
