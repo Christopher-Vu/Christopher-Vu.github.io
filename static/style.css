@@ -344,11 +344,6 @@ body {
     height: 100%;
 }
 
-.highlight-info div {
-    transition: 0.4s;
-    display: none;
-}
-
 .title-row {
     height: 12vw;
     width: 130vw;
@@ -409,13 +404,18 @@ body {
 
 .hd1 {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .highlight-desc div {
     height: 10%;
     border-left: 3px solid var(--main-text-color);
     padding-left: 10%;
+}
+
+.highlight-info div {
+    transition: 0.4s;
+    opacity: 0;
 }
 
 @media (orientation: portrait) {

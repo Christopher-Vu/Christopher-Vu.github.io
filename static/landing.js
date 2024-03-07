@@ -83,10 +83,20 @@ runGridLighting();
 
 document.body.addEventListener('click', function (event) {
   if (event.target.closest('#highlight-wrapper')) {
+  var highlightRow = event.target.closest('.highlight-row');
+  var hldl = highlightRow.querySelector('.hldl');
+  var highlightDesc = highlightRow.querySelector('.highlight-desc');
+  var highlightButton = highlightRow.querySelector('.highlight-button-wrapper');
     if (event.target.classList.contains('highlight') && !(event.target.classList.contains('expanded'))) {
       manageHighlights(event, true);
+      hldl.style.opacity = '1';
+      highlightDesc.style.opacity = '1';
+      highlightButton.style.opacity = '1';
     } else if (event.target.classList.contains('highlight') && event.target.classList.contains('expanded')) {
       manageHighlights(event, false);
+      hldl.style.opacity = '0';
+      highlightDesc.style.opacity = '0';
+      highlightButton.style.opacity = '0';
     }
     
     return;
