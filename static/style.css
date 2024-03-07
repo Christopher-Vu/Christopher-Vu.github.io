@@ -344,6 +344,11 @@ body {
     height: 100%;
 }
 
+.highlight-info div {
+    transition: 0.4s;
+    display: none;
+}
+
 .title-row {
     height: 12vw;
     width: 130vw;
@@ -411,10 +416,6 @@ body {
     height: 10%;
     border-left: 3px solid var(--main-text-color);
     padding-left: 10%;
-}
-
-.highlight-info div {
-    display: none;
 }
 
 @media (orientation: portrait) {
