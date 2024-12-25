@@ -1,3 +1,25 @@
+const cursor = document.createElement('div');
+    cursor.classList.add('cursor');
+    document.body.appendChild(cursor);
+
+    function updateCursorPosition(e) {
+      cursor.style.left = `${e.pageX}px`;
+      cursor.style.top = `${e.pageY}px`;
+    }
+
+    document.addEventListener('mousemove', updateCursorPosition);
+
+    document.querySelectorAll('a, button, .highlight').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        cursor.style.width = '75px'; 
+        cursor.style.height = '75px'; 
+      });
+      item.addEventListener('mouseleave', () => {
+        cursor.style.width = '0px';
+        cursor.style.height = '0px';
+      });
+    });
+
 document.addEventListener('scroll', function() {
     // get scroll position
     var scrollPosition = window.scrollY;

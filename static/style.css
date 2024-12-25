@@ -19,7 +19,7 @@
 	--d-outer: calc(var(--radius) * 2);
     --d-inner: calc(var(--d-outer) * 0.5);
 
-    --highlight-rows: 7;
+    --highlight-rows: 8;
 }
 
 @media (orientation: portrait) {
@@ -33,6 +33,25 @@ body {
     padding: 0;
     width: 100vw;
     overflow-x: hidden;
+    background: var(--main-bg-color);
+}
+
+.cursor {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.05s ease;
+    transition: width 0.3s ease, height 0.3s ease;
+    z-index: 1000;
+    mix-blend-mode: difference; 
+}
+
+a, button {
+    cursor: pointer;
 }
 
 #greeting {
@@ -334,6 +353,7 @@ body {
     flex-direction: row;
     height: 24vw;
     width: 130vw;
+    margin: 0; padding: 0;
 }
 
 .highlight-row div {   
@@ -341,6 +361,7 @@ body {
     border: 3px solid var(--main-text-color);
     width: 26vw;
     height: 100%;
+    margin: 0; padding: 0;
 }
 
 .title-row {
@@ -356,6 +377,7 @@ body {
 }
 
 .highlight-info {
+    margin: 0; padding: 0;
     display: flex;
     flex-direction: row;
 }
@@ -371,7 +393,7 @@ body {
 }
 
 .highlight-row div {
-    padding: 0;
+    margin: 0; padding: 0;
 }
 
 .highlight-desc {
